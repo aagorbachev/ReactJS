@@ -1,0 +1,19 @@
+{
+  "name": "simple-messenger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aagorbachev/Simple-Messenger.git"
+  },
+  "author": "Artem Gorbachev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aagorbachev/Simple-Messenger/issues"
+  },
+  "homepage": "https://github.com/aagorbachev/Simple-Messenger#readme"
+}
