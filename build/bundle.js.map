@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://simple-messenger/./src/index.js"],"names":["x"],"mappings":";;;;;AAAA,MAAMA,CAAC,GAAG,GAAV,C","file":"bundle.js","sourcesContent":["const x = 123;\r\n"],"sourceRoot":""}
