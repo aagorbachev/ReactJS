@@ -1,6 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const element = <h1 className="element">Проверка подключения React</h1>;
+let messages = ["Привет", "Как дела?"];
 
-ReactDOM.render(element, document.getElementById("root"));
+const MessageComponent = (props) => <div>{props.text}</div>;
+
+const MessageField = (props) => {
+  return props.messages.map((message) => <MessageComponent text={message} />);
+};
+
+const SendMessage = () => {};
+
+ReactDOM.render(
+  <MessageField messages={messages} />,
+  document.getElementById("root")
+);
