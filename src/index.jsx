@@ -1,24 +1,9 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-
-const initialMessages = ["Привет", "Как дела?"];
+import MessageField from "./components/MessageField.jsx";
 
 const App = () => {
-  const [messages, setMessages] = useState(initialMessages);
-
-  const handleAddMessage = () => {
-    setMessages([...messages, prompt("Ваше сообщение")]);
-  };
-
-  return (
-    <div>
-      <h1>Hot reload is working!</h1>
-      {messages.map((message) => (
-        <div>{message}</div>
-      ))}
-      <button onClick={handleAddMessage}>Напишите что-нибудь</button>
-    </div>
-  );
+  return <MessageField />;
 };
 
 ReactDOM.render(<App />, document.getElementById("root"));
