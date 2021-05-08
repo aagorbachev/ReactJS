@@ -3,8 +3,10 @@ import React from "react";
 export default (props) => {
   return (
     <>
-      <div>{props.author}</div>
-      <div>{props.text}</div>
+      <div>
+        <span className="user">{props.author}:</span>
+        <span className="text">{props.text}</span>
+      </div>
     </>
   );
 };

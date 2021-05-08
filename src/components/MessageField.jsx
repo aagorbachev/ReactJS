@@ -19,15 +19,42 @@ const MessageField = (props) => {
 
   const [messages, setMessages] = useState(inititalMessages);
 
-  const handleAddMessage = () => {
+  useEffect(() => {
+    if (
+      messages[messages.length - 1].author !== "Робот" &&
+      messages.length > 0
+    ) {
+      setTimeout(
+        () =>
+          setMessages([
+            ...messages,
+            {
+              author: "Робот",
+              text: "Не приставай ко мне, я робот!",
+            },
+          ]),
+        1000
+      );
+    }
+  }, [messages]);
+
+  const inputText = "";
+  const [text, setInputText] = useState(inputText);
+
+  const handleInput = (event) => {
+    setInputText(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault;
     setMessages([
       ...messages,
       {
-        text: "Сообщение отправлено",
+        author: "Я",
+        text: text,
       },
     ]);
-
-    useEffect();
+    setInputText("");
   };
 
   return (
@@ -35,7 +62,10 @@ const MessageField = (props) => {
       {messages.map((message, index) => (
         <Message key={index} author={message.author} text={message.text} />
       ))}
-      <button onClick={handleAddMessage}>Отправить сообщение</button>
+      <form action="#" onSubmit={handleSubmit}>
+        <input type="text" value={text} onChange={handleInput} />
+        <button type="submit">Отправить сообщение</button>
+      </form>
     </div>
   );
 };
