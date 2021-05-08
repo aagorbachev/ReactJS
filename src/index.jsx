@@ -1,17 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import MessageField from "./components/MessageField.jsx";
 
-let messages = ["Привет", "Как дела?"];
-
-const MessageComponent = (props) => <div>{props.text}</div>;
-
-const MessageField = (props) => {
-  return props.messages.map((message) => <MessageComponent text={message} />);
+const App = () => {
+  return <MessageField />;
 };
 
-const SendMessage = () => {};
-
-ReactDOM.render(
-  <MessageField messages={messages} />,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
